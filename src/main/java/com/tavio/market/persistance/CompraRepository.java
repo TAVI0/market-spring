@@ -12,8 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class CompraRepositoty implements PurchaseRepository {
-
+public class CompraRepository implements PurchaseRepository {
     @Autowired
     private CompraCrudRepository compraCrudRepository;
 

@@ -1,4 +1,5 @@
 package com.tavio.market.domain.service;
+
 import com.tavio.market.domain.Product;
 import com.tavio.market.domain.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,6 @@ import java.util.Optional;
 
 @Service
 public class ProductService {
-
     @Autowired
     private ProductRepository productRepository;
 
@@ -17,9 +17,7 @@ public class ProductService {
         return productRepository.getAll();
     }
 
-    public Optional<Product> getProduct(int productId){
-        return productRepository.getProduct(productId);
-    }
+    public Optional<Product> getProduct(int productId){ return productRepository.getProduct(productId);}
 
     public Optional<List<Product>> getByCategory(int categoryId){
         return productRepository.getByCategory(categoryId);
@@ -30,7 +28,6 @@ public class ProductService {
     }
 
     public boolean delete(int productId){
-
         return getProduct(productId).map(product -> {
             productRepository.delete(productId);
             return true;

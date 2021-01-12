@@ -7,6 +7,7 @@ public class Product {
     private double price;
     private int stock;
     private boolean active;
+    private Category category;
 
     public int getProductId() {
         return productId;
@@ -63,6 +64,4 @@ public class Product {
     public void setCategory(Category category) {
         this.category = category;
     }
-
-    private Category category;
 }
